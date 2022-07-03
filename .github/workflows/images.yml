@@ -1,8 +1,9 @@
-name: build our image
+name: Build s3_website multiarch
 
 on:
   push:
-    branches: main
+    branches: 
+      - main
 
 jobs:
   build:
