@@ -21,6 +21,7 @@ jobs:
       - name: build the image
         run: |
           export DOCKER_CLI_EXPERIMENTAL=enabled && \
-          docker buildx build \
-          --push --tag ginvoicing/s3_website:latest \
-          --platform linux/amd64,linux/arm/v7,linux/arm64 .
+          docker buildx build --push \
+          --tag ginvoicing/s3_website:latest \
+          --platform linux/amd64,linux/arm/v7,linux/arm64 \
+          .
